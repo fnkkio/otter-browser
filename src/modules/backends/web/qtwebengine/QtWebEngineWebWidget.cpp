@@ -341,7 +341,7 @@ void QtWebEngineWebWidget::triggerAction(int identifier, const QVariantMap &para
 
 			break;
 		case ActionsManager::SaveLinkToDiskAction:
-			startTransfer(TransfersManager::startTransfer(m_hitResult.linkUrl.toString(), {}, (Transfer::CanNotifyOption | (isPrivate() ? Transfer::IsPrivateOption : Transfer::NoOption))));
+			TransfersManager::startTransfer(m_hitResult.linkUrl.toString(), {}, (Transfer::CanNotifyOption | (isPrivate() ? Transfer::IsPrivateOption : Transfer::NoOption)));
 
 			break;
 		case ActionsManager::SaveLinkToDownloadsAction:
